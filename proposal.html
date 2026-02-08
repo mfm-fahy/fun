@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Proposal Day 💖</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #ff6a88 75%, #ff99ac 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+    color: #fff;
+    padding: 20px;
+}
+
+@keyframes gradientShift {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.card {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(20px);
+    padding: 30px 20px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.3), inset 0 0 40px rgba(255,255,255,0.1);
+    border: 2px solid rgba(255,255,255,0.3);
+    animation: slideUp 1.8s ease;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 5vw, 2.4rem);
+    margin: 0 0 12px 0;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    animation: heartbeat 2s infinite;
+}
+
+.sub {
+    font-size: clamp(1rem, 3vw, 1.15rem);
+    margin: 0 0 20px 0;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.names {
+    font-size: clamp(1.1rem, 3.5vw, 1.35rem);
+    font-weight: bold;
+    margin: 20px 0;
+    text-shadow: 0 3px 12px rgba(0,0,0,0.25);
+    line-height: 1.8;
+}
+
+.stickers {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    margin: 20px 0;
+    animation: float 3s infinite ease-in-out;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+    letter-spacing: clamp(4px, 2vw, 8px);
+}
+
+.propose-box {
+    margin: 25px 0;
+    padding: 25px 20px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.25), rgba(255,255,255,0.15));
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.3);
+    animation: glowBox 1.5s infinite alternate;
+}
+
+.propose-text {
+    font-size: clamp(1.05rem, 3vw, 1.25rem);
+    font-weight: bold;
+    color: #fffbe6;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.highlight {
+    margin: 18px 0 0 0;
+    font-size: clamp(1.2rem, 4vw, 1.55rem);
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #ff6b9d, #ff1744, #ff4081, #ff6ec7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(255,255,255,0.8));
+    animation: shine 2s infinite;
+    padding: 8px 0;
+}
+
+.miss {
+    margin: 25px 0 0 0;
+    font-size: clamp(1.3rem, 4vw, 1.6rem);
+    text-shadow: 0 3px 15px rgba(0,0,0,0.3);
+    animation: glow 1.5s infinite alternate;
+}
+
+button {
+    margin: 30px 0 0 0;
+    padding: 15px 40px;
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(135deg, #fff, #ffe6f0);
+    color: #ff4f81;
+    font-size: clamp(1rem, 3vw, 1.15rem);
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+button:hover {
+    transform: scale(1.15) translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+    background: linear-gradient(135deg, #ffe6f0, #fff);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .card {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 25px 18px;
+    }
+    .propose-box {
+        padding: 20px 15px;
+    }
+    button {
+        padding: 12px 30px;
+    }
+}
+
+/* Animations */
+@keyframes slideUp {
+    from {opacity:0; transform: translateY(40px);}
+    to {opacity:1; transform: translateY(0);}
+}
+
+@keyframes heartbeat {
+    0%,100% {transform: scale(1);}
+    50% {transform: scale(1.15);}
+}
+
+@keyframes float {
+    0%,100% {transform: translateY(0);}
+    50% {transform: translateY(-12px);}
+}
+
+@keyframes glow {
+    from {text-shadow: 0 0 5px #fff;}
+    to {text-shadow: 0 0 20px #ffeb3b;}
+}
+
+@keyframes glowBox {
+    from {box-shadow: 0 0 10px rgba(255,255,255,0.3);}
+    to {box-shadow: 0 0 25px rgba(255,255,255,0.8);}
+}
+
+@keyframes shine {
+    0% {filter: brightness(1);}
+    50% {filter: brightness(1.4);}
+    100% {filter: brightness(1);}
+}
+
+/* Floating hearts & sparkles */
+.floating {
+    position: absolute;
+    bottom: -20px;
+    font-size: 20px;
+    animation: rise 6s linear infinite;
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3));
+}
+
+@keyframes rise {
+    0% {transform: translateY(0); opacity: 1;}
+    100% {transform: translateY(-110vh); opacity: 0;}
+}
+
+@keyframes explode {
+    0% {transform: scale(0) rotate(0deg); opacity: 0;}
+    50% {opacity: 1;}
+    100% {transform: scale(1) rotate(360deg); opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes pulse {
+    0%, 100% {transform: scale(1);}
+    50% {transform: scale(1.05);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>Happy Proposal Day 💍</h1>
+    <div class="sub">This is me… proposing YOU 🥹❤️</div>
+
+    <div class="names">
+        Airo 💕 Kullachi <br>
+        Baby 😘 chlm 💞 chla kutty 🥰
+    </div>
+
+    <div class="stickers">
+        💖 💘 💍 🥰 😘 💑 🌹 ✨
+    </div>
+
+    <div class="propose-box">
+        <div class="propose-text">
+            If I go down on one knee today,<br>
+            will you hold my hand forever? 💍🥺
+        </div>
+
+        <div class="highlight">
+            I love you damn so so much ❤️🔥
+        </div>
+    </div>
+
+    <div class="miss">
+        Miss u sooo much 😢💔
+    </div>
+
+    <button onclick="popLove()">Say Yes 💌</button>
+</div>
+
+<script>
+function popLove() {
+    const card = document.querySelector('.card');
+    card.style.animation = 'explode 0.8s ease-out';
+    
+    setTimeout(() => {
+        card.innerHTML = `
+            <div style="animation: fadeIn 1s ease-out;">
+                <h1 style="font-size: clamp(2rem, 6vw, 2.8rem); margin: 0 0 15px 0; animation: heartbeat 1.5s infinite;">💍 SHE SAID YES! 💍</h1>
+                <div style="font-size: clamp(1.1rem, 3.5vw, 1.4rem); margin: 0 0 25px 0; animation: fadeIn 1.5s ease-out;">🎉 Forever & Always 🎉</div>
+            </div>
+            
+            <div style="font-size: clamp(1.8rem, 5vw, 2.5rem); margin: 25px 0; animation: fadeIn 2s ease-out, pulse 2s infinite;">
+                ❤️ Airo & Kullachi ❤️
+            </div>
+            
+            <div style="background: rgba(255,255,255,0.25); padding: clamp(18px, 5vw, 25px) clamp(15px, 4vw, 20px); border-radius: 20px; margin: 25px 0; animation: fadeIn 2.5s ease-out, glowBox 2s infinite alternate;">
+                <div style="font-size: clamp(1rem, 3vw, 1.2rem); line-height: 2; color: #fffbe6; text-align: center;">
+                    💕 You're my today and all of my tomorrows<br>
+                    💖 My heart is, and always will be, yours<br>
+                    💘 Together we'll write our forever story<br>
+                    ✨ I choose you, now and always
+                </div>
+            </div>
+            
+            <div style="font-size: clamp(1.2rem, 4vw, 1.5rem); margin: 25px 0 0 0; animation: fadeIn 3s ease-out, glow 1.5s infinite alternate;">
+                Our beautiful journey begins... 🌹💫
+            </div>
+            
+            <div style="font-size: clamp(1.8rem, 5vw, 2.5rem); margin: 20px 0 0 0; letter-spacing: clamp(5px, 2vw, 10px); animation: fadeIn 3.5s ease-out;">
+                😘 💑 🥰 💞 ♾️
+            </div>
+        `;
+        
+        // Burst of hearts
+        for(let i = 0; i < 30; i++) {
+            setTimeout(() => {
+                const heart = document.createElement('div');
+                heart.innerHTML = ['❤️','💖','💕','💗','💓','💝'][Math.floor(Math.random()*6)];
+                heart.style.position = 'fixed';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.top = '50%';
+                heart.style.fontSize = (Math.random() * 30 + 20) + 'px';
+                heart.style.animation = 'rise 4s ease-out';
+                heart.style.pointerEvents = 'none';
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 4000);
+            }, i * 100);
+        }
+    }, 300);
+}
+
+// Floating emojis generator
+const emojis = ["❤️","💖","💘","✨","🌹","😘","🥰","💍"];
+
+setInterval(() => {
+    const el = document.createElement("div");
+    el.className = "floating";
+    el.innerHTML = emojis[Math.floor(Math.random()*emojis.length)];
+    el.style.left = Math.random() * 100 + "vw";
+    el.style.animationDuration = (Math.random() * 3 + 3) + "s";
+    document.body.appendChild(el);
+
+    setTimeout(() => el.remove(), 6000);
+}, 250);
+</script>
+
+</body>
+</html>
